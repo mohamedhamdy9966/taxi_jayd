@@ -11,8 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 import AutoPlay from "./Autoplay";
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
   const [active, setActive] = useState("home");
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -70,76 +70,80 @@ const Home = () => {
     <div className="font-sans bg-gray-50 text-gray-900">
       {/* Header */}
       <header className="bg-white shadow">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
-            <img src="/recruito_logo.png" alt="Recruito Logo" />
+            <img
+              src="/recruito_logo.png"
+              alt="Recruito Logo"
+              className="w-32 md:w-40"
+            />
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex items-center space-x-6">
-            <a
-              href="#home"
-              className="text-sm text-gray-700 hover:text-blue-500"
-            >
-              Home<span className="text-blue-500">*</span>
-            </a>
-            <a
-              href="#features"
-              className="text-sm text-gray-700 hover:text-blue-500"
-            >
-              Features
-            </a>
-            <a
-              href="#pricing"
-              className="text-sm text-gray-700 hover:text-blue-500"
-            >
-              Pricing
-            </a>
-            <a
-              href="#resources"
-              className="text-sm text-gray-700 hover:text-blue-500"
-            >
-              Resources
-            </a>
+          <nav className="flex items-center space-x-6 text-center flex-wrap md:flex-nowrap">
+            {["home", "features", "pricing", "resources"].map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                onClick={() => setActive(section)} // Set active on click
+                className={`text-sm ${
+                  active === section
+                    ? "text-blue-500 font-semibold" // Active styles
+                    : "text-gray-700 hover:text-blue-500"
+                }`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}{" "}
+                {active === section && (
+                  <span className="text-blue-500">*</span> // Add star if active
+                )}
+              </a>
+            ))}
           </nav>
 
           {/* Contact Button */}
           <a
             href="#contact"
-            className="bg-gradient-to-r from-[#1F67E7] to-[#1AD7BE] text-white text-sm px-6 py-2 rounded-full shadow-md hover:opacity-90"
+            className="bg-gradient-to-r from-[#1F67E7] to-[#1AD7BE] text-white text-sm px-4 py-2 rounded-full shadow-md hover:opacity-90 mt-4 md:mt-0"
           >
             Contact Us
           </a>
         </div>
       </header>
 
-      {/* home section */}
+      {/* Home Section */}
       <section
         id="home"
-        className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 relative"
+        className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 relative overflow-hidden"
       >
-        <img src="/docker-pattern-right 3.png" className="absolute top-0 right-0 opacity-80"/>
-        <img src="/docker-pattern-right 4.png" className="absolute bottom-0 left-0 opacity-80"/>
+        <img
+          src="/docker-pattern-right 3.png"
+          className="absolute top-0 right-0 opacity-80 w-20 sm:w-40 md:w-60"
+        />
+        <img
+          src="/docker-pattern-right 4.png"
+          className="absolute bottom-0 left-0 opacity-80 w-20 sm:w-40 md:w-60"
+        />
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-extrabold mb-4 text-gray-800">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-gray-800">
             Revolutionize Your Hiring <br /> Process with{" "}
             <span className="text-blue-500">Recruito AI</span> ✨
           </h2>
-          <p className="text-lg mb-8 text-[#3E4757]">
+          <p className="text-sm sm:text-base md:text-lg mb-8 text-[#3E4757]">
             Your fully automated hiring assistant that sources, screens,
-            <br /> and interviews candidates effortlessly.
+            <br className="hidden sm:block" /> and interviews candidates
+            effortlessly.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="#free-trial"
-              className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-blue-700 transition"
             >
               Start Your Free Trial
             </a>
             <a
               href="#request-demo"
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition"
+              className="bg-white text-blue-600 px-6 py-3 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition"
             >
               <span>✨</span>Request A Demo
             </a>
@@ -149,25 +153,25 @@ const Home = () => {
 
       {/* Dashboard section */}
       <section className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center">
-        <div className="mb-10">
-          <p className="text-lg md:text-2xl font-semibold text-[#3E4757]">
+        <div className="mb-10 px-4 text-center">
+          <p className="text-base sm:text-lg md:text-2xl font-semibold text-[#3E4757]">
             See How We Create An Autonomous{" "}
             <span className="underline text-blue-600">AI Agent</span>
           </p>
         </div>
-        <div className="relative w-full max-w-5xl flex items-center justify-center">
+        <div className="relative w-full max-w-5xl flex items-center justify-center px-4">
           <img
             src="/Group 4.png"
             alt="Dashboard example"
-            className="shadow-lg rounded-md z-0"
+            className="shadow-lg rounded-md w-full max-w-[90%] md:max-w-[80%] z-0"
           />
           <img
             src="/Customers 1.png"
-            className="z-1 absolute -right-28 top-24"
+            className="z-1 absolute -right-12 top-10 md:-right-28 md:top-24"
           />
           <img
             src="/Featured Product 1.png"
-            className="z-1 absolute -left-32 top-56"
+            className="z-1 absolute -left-10 bottom-10 md:-left-32 md:top-56"
           />
         </div>
       </section>
@@ -227,8 +231,14 @@ const Home = () => {
             <h6 className="font-semibold text-5xl text-[#0b1928] leading-snug">
               Streamline your recruitment with <br /> our advanced features
             </h6>
-            <img src="/public/Group 5.png" className="absolute -right-40 top-0"/>
-            <img src="/public/Group 5.png" className="absolute -left-16 bottom-0"/>
+            <img
+              src="/public/Group 5.png"
+              className="absolute -right-40 top-0"
+            />
+            <img
+              src="/public/Group 5.png"
+              className="absolute -left-16 bottom-0"
+            />
           </div>
         </div>
 
@@ -465,7 +475,7 @@ const Home = () => {
 
       {/* faqs */}
       <section
-        id="features"
+        id="resources"
         className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center"
       >
         <div className="flex flex-col items-center justify-center mb-14">
