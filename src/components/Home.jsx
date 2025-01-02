@@ -232,11 +232,11 @@ const Home = () => {
               Streamline your recruitment with <br /> our advanced features
             </h6>
             <img
-              src="/public/Group 5.png"
+              src="/Group 5.png"
               className="absolute -right-40 top-0"
             />
             <img
-              src="/public/Group 5.png"
+              src="/Group 5.png"
               className="absolute -left-16 bottom-0"
             />
           </div>
@@ -259,7 +259,7 @@ const Home = () => {
           {/* Image Section */}
           <div className="relative flex items-center justify-center w-1/2 border border-gray-200 rounded-lg m-5 pb-0">
             <img
-              src="/public/Gabrun-Minutes-BG 1.png"
+              src="/Gabrun-Minutes-BG 1.png"
               className="absolute top-0 right-0 opacity-80"
             />
             <div>
