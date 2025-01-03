@@ -174,14 +174,14 @@ const Home = () => {
           <img
             src="/Customers 1.png"
             alt="Customers"
-            className="z-10 absolute -right-6 top-8 w-[20%] sm:w-[15%] md:w-[12%] md:-right-20 md:top-20"
+            className="z-10 absolute -right-6 top-8 w-[20%] sm:w-[15%] md:w-[12%] lg:w-[26%] md:-right-20 md:top-20"
           />
 
           {/* Decorative Image 2 (Featured Product) */}
           <img
             src="/Featured Product 1.png"
             alt="Featured Product"
-            className="z-10 absolute -left-6 bottom-8 w-[20%] sm:w-[15%] md:w-[12%] md:-left-24 md:bottom-20"
+            className="z-10 absolute -left-6 bottom-8 w-[20%] sm:w-[15%] md:w-[12%] lg:w-[26%] md:-left-24 md:bottom-20"
           />
         </div>
       </section>
