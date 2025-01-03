@@ -29,7 +29,7 @@ function AutoPlay() {
   };
 
   return (
-    <div className="slider-container max-w-7xl mx-auto py-12 px-4">
+    <div className="slider-container max-w-7xl py-12 px-4">
       <Slider {...settings}>
         <div className="bg-white p-6 rounded-lg shadow-md text-center w-full">
           <div className="flex items-center space-x-4">

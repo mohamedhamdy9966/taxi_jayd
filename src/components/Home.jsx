@@ -153,65 +153,65 @@ const Home = () => {
 
       {/* Dashboard section */}
       <section className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center">
+        {/* Title Section */}
         <div className="mb-10 px-4 text-center">
           <p className="text-base sm:text-lg md:text-2xl font-semibold text-[#3E4757]">
             See How We Create An Autonomous{" "}
             <span className="underline text-blue-600">AI Agent</span>
           </p>
         </div>
+
+        {/* Image Section */}
         <div className="relative w-full max-w-5xl flex items-center justify-center px-4">
+          {/* Main Dashboard Image */}
           <img
             src="/Group 4.png"
             alt="Dashboard example"
             className="shadow-lg rounded-md w-full max-w-[90%] md:max-w-[80%] z-0"
           />
+
+          {/* Decorative Image 1 (Customers) */}
           <img
             src="/Customers 1.png"
-            className="z-1 absolute -right-12 top-10 md:-right-28 md:top-24"
+            alt="Customers"
+            className="z-10 absolute -right-6 top-8 w-[20%] sm:w-[15%] md:w-[12%] md:-right-20 md:top-20"
           />
+
+          {/* Decorative Image 2 (Featured Product) */}
           <img
             src="/Featured Product 1.png"
-            className="z-1 absolute -left-10 bottom-10 md:-left-32 md:top-56"
+            alt="Featured Product"
+            className="z-10 absolute -left-6 bottom-8 w-[20%] sm:w-[15%] md:w-[12%] md:-left-24 md:bottom-20"
           />
         </div>
       </section>
 
       {/* companies logos */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center px-4">
           <h3 className="text-gray-600 text-lg font-medium mb-6">
             Trusted By The World Leading Organizations
           </h3>
-          <div className="flex justify-center items-center flex-wrap gap-6">
-            <img
-              src="/GSK.png"
-              alt="GSK"
-              className="h-10 opacity-80 hover:opacity-100 transition"
-            />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center items-center">
             <img
               src="/OGLIVY.png"
               alt="Ogilvy"
-              className="h-10 opacity-80 hover:opacity-100 transition"
+              className="h-10 w-auto mx-auto opacity-80 hover:opacity-100 transition"
             />
             <img
               src="/intys.png"
               alt="intys"
-              className="h-10 opacity-80 hover:opacity-100 transition"
+              className="h-10 w-auto mx-auto opacity-80 hover:opacity-100 transition"
             />
             <img
               src="/linkedin.png"
               alt="LinkedIn"
-              className="h-10 opacity-80 hover:opacity-100 transition"
+              className="h-10 w-auto mx-auto opacity-80 hover:opacity-100 transition"
             />
             <img
               src="/OGLIVY.png"
               alt="Ogilvy"
-              className="h-10 border rounded-sm p-1 transition"
-            />
-            <img
-              src="/GSK.png"
-              alt="GSK"
-              className="h-10 opacity-80 hover:opacity-100 transition"
+              className="h-10 w-auto mx-auto border rounded-sm p-1 transition"
             />
           </div>
         </div>
@@ -223,222 +223,196 @@ const Home = () => {
         className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center"
       >
         {/* Features Header Section */}
-        <div className="flex flex-col items-center justify-center mb-14">
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition mb-6">
+        <div className="flex flex-col items-center justify-center mb-14 px-4">
+          <button className="bg-white text-blue-600 px-6 py-2 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition mb-6 text-sm sm:text-base md:px-8 md:py-3">
             Features
           </button>
           <div className="text-center relative">
-            <h6 className="font-semibold text-5xl text-[#0b1928] leading-snug">
-              Streamline your recruitment with <br /> our advanced features
+            <h6 className="font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl text-[#0b1928] leading-snug">
+              Streamline your recruitment with{" "}
+              <br className="hidden sm:block" /> our advanced features
             </h6>
             <img
               src="/Group 5.png"
-              className="absolute -right-40 top-0"
+              className="absolute -right-4 top-0 hidden lg:block"
             />
             <img
               src="/Group 5.png"
-              className="absolute -left-16 bottom-0"
+              className="absolute -left-4 bottom-0 hidden lg:block"
             />
           </div>
         </div>
 
-        {/* first Section */}
-        <div className="flex flex-row items-center justify-between w-full max-w-7xl px-10">
-          {/* Text Section */}
-          <div className="flex flex-col justify-center text-left w-1/2 pr-8">
-            <h5 className="font-semibold text-4xl text-[#0b1928] leading-snug mb-6">
-              Candidate Sourcing & <br /> Job Posting
-            </h5>
-            <p className="text-[#3E4757] text-lg leading-relaxed">
-              Recruito automatically posts your position or actively hunts top
-              candidates across multiple platforms. No human intervention
-              needed.
-            </p>
-          </div>
-
-          {/* Image Section */}
-          <div className="relative flex items-center justify-center w-1/2 border border-gray-200 rounded-lg m-5 pb-0">
-            <img
-              src="/Gabrun-Minutes-BG 1.png"
-              className="absolute top-0 right-0 opacity-80"
-            />
-            <div>
-              <div className="relative pb-0">
-                <img
-                  src="/Group 8.png"
-                  alt="Highlighted person"
-                  className="relative z-20 rounded-lg"
-                />
-                <img
-                  src="/solar_verified-check-bold.png"
-                  className="absolute top-5 left-20 z-40"
-                />
-              </div>
+        {/* Features Sections */}
+        {[
+          {
+            title: "Candidate Sourcing & Job Posting",
+            description:
+              "Recruito automatically posts your position or actively hunts top candidates across multiple platforms. No human intervention needed.",
+            image: [{ src: "/Group 8.png" }],
+            additionalImages: [
+              {
+                src: "/solar_verified-check-bold.png",
+                position: "top-12 left-20 sm:left-40",
+                zIndex: "z-30",
+              },
+              {
+                src: "/Group 10.png",
+                position: "right-0.5 top-11",
+                zIndex: "z-9",
+              },
+              {
+                src: "/Group 9.png",
+                position: "left-0.5 top-12",
+                zIndex: "z-9",
+              },
+            ],
+            reverse: false,
+          },
+          {
+            title: "Automated Resume Screening & Filtering",
+            description:
+              "Our AI instantly sorts and prioritizes resumes, highlighting only the strongest matches and discarding unqualified applicants.",
+            image: [
+              { src: "/Group 13.png" },
+              { src: "/Group 12.png" },
+              { src: "/Group 11.png" },
+            ],
+            additionalImages: [
+              {
+                src: "/solar_magnifer-outline.png",
+                position: "bottom-0 right-0",
+              },
+            ],
+            reverse: true,
+          },
+          {
+            title: "Online Assessment",
+            description:
+              "Candidates complete a quick skill or behavioral test to validate their capabilities. This process is seamlessly integrated and fully automated.",
+            image: [{ src: "/Group 14.png" }],
+            reverse: false,
+          },
+          {
+            title: "AI Video Interviews",
+            description:
+              "An AI-driven virtual interviewer conducts dynamic, adaptive interviews, capturing both technical insights and soft skills. Everything is entirely hands-free.",
+            image: [{ src: "/image.png", mx: "9" }],
+            additionalImages: [
+              {
+                src: "/Group 15.png",
+                position: "bottom-0 -right-16",
+                zIndex: "z-50",
+              },
+            ],
+            reverse: true,
+          },
+          {
+            title: "Final Shortlist for the Line Manager",
+            description:
+              "Recruito presents a curated list of the top performers, complete with interview recordings and evaluations, so you can make a swift, confident hiring decision.",
+            image: [
+              { src: "/Group 16.png" },
+              { src: "/Group 17.png" },
+              { src: "/Group 18.png" },
+            ],
+            additionalImages: [
+              {
+                src: "/public/Gabrun-Minutes-BG 1.png",
+                position: "top-0 right-0",
+              },
+            ],
+            reverse: false,
+          },
+        ].map((feature, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-6 md:px-10 ${
+              feature.reverse ? "md:flex-row-reverse" : ""
+            } mb-12`}
+          >
+            {/* Text Section */}
+            <div
+              className={`flex flex-col justify-center w-full md:w-1/2 mb-6 md:mb-0 ${
+                feature.reverse
+                  ? "text-center md:text-right"
+                  : "text-center md:text-left"
+              }`}
+            >
+              <h5 className="font-semibold text-lg sm:text-2xl md:text-4xl text-[#0b1928] leading-snug mb-4">
+                {feature.title}
+              </h5>
+              <p className="text-[#3E4757] text-sm sm:text-base md:text-lg leading-relaxed">
+                {feature.description}
+              </p>
             </div>
 
-            <img
-              src="/Group 10.png"
-              alt="Background card 1"
-              className="absolute z-10 right-0.5 top-11 rounded-lg opacity-95"
-            />
-            <img
-              src="/Group 9.png"
-              alt="Background card 2"
-              className="absolute z-0 left-0.5 top-12 rounded-lg opacity-95"
-            />
-          </div>
-        </div>
-
-        {/* second section */}
-
-        <div className="flex flex-row items-center justify-between w-full max-w-7xl px-10">
-          {/* Image Section */}
-          <div className="relative flex flex-col items-center justify-center w-1/2 pt-24 border pb-10 border-gray-200 rounded-lg m-5">
-            <img
-              src="/Gabrun-Minutes-BG 1.png"
-              className="absolute top-0 left-0"
-            />
-            <img
-              src="/solar_magnifer-outline.png"
-              className="absolute bottom-0 right-0"
-            />
-            <img src="/Group 13.png" alt="input_1" className="" />
-            <img src="/Group 12.png" alt="input_2" className="opacity-90" />
-            <img src="/Group 11.png" alt="input_3" className="opacity-90" />
-          </div>
-
-          {/* Text Section */}
-          <div className="flex flex-col justify-center text-center w-1/2 pr-8">
-            <h5 className="font-semibold text-4xl text-[#0b1928] leading-snug mb-6">
-              Automated Resume <br /> Screening & Filtering
-            </h5>
-            <p className="text-[#3E4757] text-lg leading-relaxed">
-              Our AI instantly sorts and prioritizes resumes, highlighting only
-              <br />
-              the strongest matches and discarding unqualified applicants.
-            </p>
-          </div>
-        </div>
-
-        {/* third section */}
-
-        <div className="flex flex-row items-center justify-between w-full max-w-7xl px-10">
-          {/* Text Section */}
-          <div className="flex flex-col justify-center text-left w-1/2 pr-8">
-            <h5 className="font-semibold text-4xl text-[#0b1928] leading-snug mb-6">
-              Online Assessment
-            </h5>
-            <p className="text-[#3E4757] text-lg leading-relaxed">
-              Candidates complete a quick skill or behavioral test to validate
-              their capabilities. This process is seamlessly integrated and
-              fully automated.
-            </p>
-          </div>
-
-          {/* Image Section */}
-          <div className="relative flex items-center justify-center w-1/2 border border-gray-200 rounded-lg m-5">
-            <img
-              src="/Gabrun-Minutes-BG 1.png"
-              className="absolute top-0 right-0 opacity-85 z-0"
-            />
-            <img src="/Group 14.png" alt="rating" className="w-100% z-10" />
-          </div>
-        </div>
-
-        {/* fourth section */}
-
-        <div className="flex flex-row items-center justify-between w-full max-w-7xl px-10">
-          {/* Image Section */}
-
-          <div className="relative flex flex-col items-center justify-center w-1/2 border pt-5 pr-10 border-gray-200 rounded-lg m-5">
-            <img
-              src="/Gabrun-Minutes-BG 1.png"
-              className="absolute top-0 left-0"
-            />
-            <img
-              src="/Group 15.png"
-              className="absolute bottom-0 -right-12 z-20"
-            />
-            <img src="/image.png" alt="input_1" className="z-10" />
-          </div>
-
-          {/* Text Section */}
-
-          <div className="flex flex-col justify-center text-center w-1/2 pr-8">
-            <h5 className="font-semibold text-4xl text-[#0b1928] leading-snug mb-6">
-              AI Video Interviews
-            </h5>
-            <p className="text-[#3E4757] text-lg leading-relaxed text-left pl-14">
-              An AI-driven virtual interviewer conducts dynamic, adaptive
-              interviews, capturing both technical insights and soft skills.
-              Everything is entirely hands-free.
-            </p>
-          </div>
-        </div>
-
-        {/* fifth section */}
-
-        <div className="flex flex-row items-center justify-between w-full max-w-7xl px-10">
-          {/* Text Section */}
-          <div className="flex flex-col justify-center text-left w-1/2 pr-8">
-            <h5 className="font-semibold text-[44px] text-[#0b1928] leading-snug mb-6">
-              Final Shortlist for the
-              <br /> Line Manager
-            </h5>
-            <p className="text-[#3E4757] text-lg leading-relaxed">
-              Recruito presents a curated list of the top performers, complete
-              with interview recordings and evaluations, so you can make a
-              swift, confident hiring decision.
-            </p>
-          </div>
-
-          {/* Image Section */}
-          <div className="relative flex items-center justify-center w-1/2 border border-gray-200 rounded-lg m-5">
-            <img
-              src="/Gabrun-Minutes-BG 1.png"
-              className="absolute top-0 right-0 opacity-75"
-            />
-            <div className="pt-10">
-              <img src="/Group 16.png" className="h-40" />
-              <img src="/Group 17.png" className="h-48" />
-              <img src="/Group 18.png" className="h-40" />
+            {/* Image Section */}
+            <div className="relative flex flex-col items-center justify-center w-full md:w-1/2 border border-gray-200 rounded-lg p-4 sm:p-6">
+              {feature.image.map((img, dex) => (
+                <img
+                  key={dex}
+                  src={img.src}
+                  alt={img.src}
+                  className={`relative z-${10 - dex} ${
+                    img.mx ? `mx-${img.mx}` : ""
+                  } opacity-${100 - dex * 10}`}
+                />
+              ))}
+              {feature.additionalImages &&
+                feature.additionalImages.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img.src}
+                    className={`absolute ${img.position} ${img.zIndex} opacity-90`}
+                  />
+                ))}
             </div>
           </div>
-        </div>
+        ))}
       </section>
 
       {/* Benefits */}
       <section
         id="pricing"
-        className="bg-[#0B1928] py-20 flex flex-col items-center justify-center relative pt-5 pb-5 pr-10 pl-10"
+        className="bg-[#0B1928] py-20 flex flex-col items-center justify-center relative px-4 sm:px-10"
       >
+        {/* Background Images */}
         <img
           src="/Gabrun-Hero-BG-5 1.png"
-          className="absolute bottom-0 left-0"
+          className="absolute bottom-0 left-0 w-1/3 sm:w-auto"
+          alt="Background Left"
         />
         <img
           src="/Gabrun-Hero-BG-5 2 (1).png"
-          className="absolute bottom-0 right-0"
+          className="absolute bottom-0 right-0 w-1/3 sm:w-auto"
+          alt="Background Right"
         />
-        {/* benefits Header Section */}
+
+        {/* Benefits Header Section */}
         <div className="flex flex-col items-center justify-center mb-14">
           <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition mb-6">
             Benefits
           </button>
-          <div className="text-center">
-            <h4 className="font-semibold text-5xl text-[#ffffff] leading-snug">
+          <div className="text-center px-4">
+            <h4 className="font-semibold text-3xl sm:text-4xl lg:text-5xl text-white leading-snug">
               Unlock the advantages of using <br /> Recruito AI for your hiring
               needs.
             </h4>
           </div>
         </div>
-        {/* cards */}
-        <div className="flex flex-row justify-between items-center gap-2">
+
+        {/* Cards Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Card 1 */}
           <div className="flex flex-col items-center justify-center border border-white rounded-xl p-6">
             <div className="p-5 border border-white rounded-xl mb-4">
-              <img src="/streamline_ai-cloud-spark.png" />
+              <img
+                src="/streamline_ai-cloud-spark.png"
+                alt="Automate Processes"
+              />
             </div>
-            <h3 className="text-[#fff] font-semibold text-center mb-4">
+            <h3 className="text-white font-semibold text-center mb-4">
               Automate Processes
             </h3>
             <p className="text-center text-[#808080] mb-4">
@@ -446,11 +420,16 @@ const Home = () => {
               so you can focus on strategic decisions.
             </p>
           </div>
+
+          {/* Card 2 */}
           <div className="flex flex-col items-center justify-center border border-white rounded-xl p-6">
             <div className="p-5 border border-white rounded-xl mb-4">
-              <img src="/streamline_ai-edit-spark.png" />
+              <img
+                src="/streamline_ai-edit-spark.png"
+                alt="Provide Instant Information"
+              />
             </div>
-            <h3 className="text-[#fff] font-semibold text-center mb-4">
+            <h3 className="text-white font-semibold text-center mb-4">
               Provide Instant Information
             </h3>
             <p className="text-center text-[#808080] mb-4">
@@ -458,11 +437,16 @@ const Home = () => {
               overlooked in your search.
             </p>
           </div>
+
+          {/* Card 3 */}
           <div className="flex flex-col items-center justify-center border border-white rounded-xl p-6">
             <div className="p-5 border border-white rounded-xl mb-4">
-              <img src="/streamline_ai-generate-portrait-image-spark.png" />
+              <img
+                src="/streamline_ai-generate-portrait-image-spark.png"
+                alt="Make Data-Driven Decisions"
+              />
             </div>
-            <h3 className="text-[#fff] font-semibold text-center mb-4">
+            <h3 className="text-white font-semibold text-center mb-4">
               Make Data-Driven Decisions
             </h3>
             <p className="text-center text-[#808080] mb-4">
@@ -476,23 +460,29 @@ const Home = () => {
       {/* faqs */}
       <section
         id="resources"
-        className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center"
+        className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center px-4"
       >
+        {/* FAQ Header */}
         <div className="flex flex-col items-center justify-center mb-14">
           <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition mb-6">
             FAQS
           </button>
         </div>
-        <div className="max-w-2xl mx-auto p-5 border border-gray-300 rounded-md shadow-md w-[980px]">
+
+        {/* FAQ Container */}
+        <div className="max-w-3xl mx-auto p-5 border border-gray-300 rounded-md shadow-md w-full">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b last:border-b-0 w-[650px]">
+            <div key={index} className="border-b last:border-b-0">
+              {/* Question Button */}
               <button
-                className="w-full text-left py-3 px-4 font-semibold flex justify-between items-center text-gray-700 hover:text-blue-600 font-medium focus:outline-none"
+                className="w-full text-left py-3 px-4 font-semibold flex justify-between items-center text-gray-700 hover:text-blue-600 focus:outline-none"
                 onClick={() => toggle(index)}
               >
                 {faq.question}
                 <span>{activeIndex === index ? "▲" : "▼"}</span>
               </button>
+
+              {/* Answer Section */}
               {activeIndex === index && (
                 <div className="px-4 pb-4 text-gray-600">{faq.answer}</div>
               )}
@@ -519,7 +509,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 w-full p-2">
           <AutoPlay />
         </div>
       </section>
@@ -531,19 +521,18 @@ const Home = () => {
       >
         {/* Background Grid Images */}
         <img
-          className="absolute right-0 opacity-90"
+          className="absolute right-0 top-0 w-1/3 max-w-xs opacity-90 hidden lg:block"
           src="/grid1 1.png"
           alt="Grid Background Right"
         />
         <img
-          className="absolute left-0 opacity-90"
+          className="absolute left-0 top-0 w-1/3 max-w-xs opacity-90 hidden lg:block"
           src="/grid1 2.png"
           alt="Grid Background Left"
         />
 
         {/* Central Circular Image */}
-        <div className="flex justify-center items-center w-64 mb-8">
-          {/* Inner Image */}
+        <div className="flex justify-center items-center w-48 md:w-64 lg:w-72 mb-8">
           <img
             src="/123456-removebg-preview.png"
             alt="Central Icon"
@@ -552,8 +541,8 @@ const Home = () => {
         </div>
 
         {/* Heading */}
-        <div className="text-center mb-8">
-          <h6 className="font-semibold text-4xl text-[#0b1928] leading-snug">
+        <div className="text-center mb-8 px-4">
+          <h6 className="font-semibold text-2xl md:text-4xl lg:text-5xl text-[#0b1928] leading-snug">
             Ready to enhance your <br /> hiring process?
           </h6>
         </div>
@@ -562,7 +551,7 @@ const Home = () => {
         <div className="flex justify-center items-center">
           <a
             href="#request-demo"
-            className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-700 transition text-sm md:text-base lg:text-lg"
           >
             ✨ Request A Demo
           </a>
@@ -571,14 +560,15 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="bg-gray-100 py-6">
-        <div className="container mx-auto px-4 flex flex-row md:flex-col">
-          {/* top Section - Logo and Copyright */}
-
-          <div className="flex flex-row justify-between items-center mb-5">
+        <div className="container mx-auto px-4">
+          {/* Top Section: Logo and Social Icons */}
+          <div className="flex flex-col md:flex-row md:justify-between items-center mb-6 space-y-4 md:space-y-0">
+            {/* Logo Section */}
             <div className="flex items-center space-x-2">
-              <img src="/recruito_logo.png" alt="Recruito-AI" />
+              <img src="/recruito_logo.png" alt="Recruito-AI" className="h-8" />
             </div>
 
+            {/* Social Media Links */}
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-gray-700">
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
@@ -595,12 +585,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-row justify-between items-center">
-            <div className="flex space-x-4">
-              <span className="text-sm text-gray-700">
-                &copy; 2024 Recruito AI. All Rights Reserved.
-              </span>
-            </div>
+          {/* Bottom Section: Copyright and Links */}
+          <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <span className="text-sm text-gray-700 text-center md:text-left">
+              &copy; 2024 Recruito AI. All Rights Reserved.
+            </span>
 
             {/* Terms and Privacy Links */}
             <div className="flex space-x-4 text-sm">
