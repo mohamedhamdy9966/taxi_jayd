@@ -194,6 +194,11 @@ const Home = () => {
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center items-center">
             <img
+              src="/intys.png"
+              alt="intys"
+              className="h-10 w-auto mx-auto opacity-80 hover:opacity-100 transition"
+            />
+            <img
               src="/OGLIVY.png"
               alt="Ogilvy"
               className="h-10 w-auto mx-auto opacity-80 hover:opacity-100 transition"
@@ -212,6 +217,11 @@ const Home = () => {
               src="/OGLIVY.png"
               alt="Ogilvy"
               className="h-10 w-auto mx-auto border rounded-sm p-1 transition"
+            />
+            <img
+              src="/intys.png"
+              alt="intys"
+              className="h-10 w-auto mx-auto opacity-80 hover:opacity-100 transition"
             />
           </div>
         </div>
