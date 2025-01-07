@@ -152,10 +152,10 @@ const Home = () => {
       </section>
 
       {/* Dashboard section */}
-      <section className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center">
+      <section className="bg-gradient-to-br from-[#f4f9ff] to-white py-8 sm:py-12 md:py-20 flex flex-col items-center justify-center">
         {/* Title Section */}
-        <div className="mb-10 px-4 text-center">
-          <p className="text-base sm:text-lg md:text-2xl font-semibold text-[#3E4757]">
+        <div className="mb-6 sm:mb-8 md:mb-10 px-4 text-center">
+          <p className="text-sm sm:text-base md:text-lg lg:text-2xl font-semibold text-[#3E4757]">
             See How We Create An Autonomous{" "}
             <span className="underline text-blue-600">AI Agent</span>
           </p>
@@ -170,18 +170,18 @@ const Home = () => {
             className="shadow-lg rounded-md w-full max-w-[90%] md:max-w-[80%] z-0"
           />
 
-          {/* Decorative Image 1 (Customers) */}
+          {/* Decorative Image 1 (Customers) - Hidden on Mobile */}
           <img
             src="/Customers 1.png"
             alt="Customers"
-            className="z-10 absolute -right-6 top-8 w-[20%] sm:w-[15%] md:w-[12%] lg:w-[26%] md:-right-20 md:top-20"
+            className="z-10 absolute -right-4 sm:-right-6 top-4 sm:top-8 w-[15%] sm:w-[15%] md:w-[12%] lg:w-[26%] md:-right-20 md:top-20 hidden sm:block"
           />
 
-          {/* Decorative Image 2 (Featured Product) */}
+          {/* Decorative Image 2 (Featured Product) - Hidden on Mobile */}
           <img
             src="/Featured Product 1.png"
             alt="Featured Product"
-            className="z-10 absolute -left-6 bottom-8 w-[20%] sm:w-[15%] md:w-[12%] lg:w-[26%] md:-left-24 md:bottom-20"
+            className="z-10 absolute -left-4 sm:-left-6 bottom-4 sm:bottom-8 w-[15%] sm:w-[15%] md:w-[12%] lg:w-[26%] md:-left-24 md:bottom-20 hidden sm:block"
           />
         </div>
       </section>
@@ -230,25 +230,28 @@ const Home = () => {
       {/* features */}
       <section
         id="features"
-        className="bg-gradient-to-br from-[#f4f9ff] to-white py-20 flex flex-col items-center justify-center"
+        className="bg-gradient-to-br from-[#f4f9ff] to-white py-12 sm:py-20 flex flex-col items-center justify-center"
       >
         {/* Features Header Section */}
-        <div className="flex flex-col items-center justify-center mb-14 px-4">
-          <button className="bg-white text-blue-600 px-6 py-2 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition mb-6 text-sm sm:text-base md:px-8 md:py-3">
+        <div className="flex flex-col items-center justify-center mb-8 sm:mb-14 px-4">
+          <button className="bg-white text-blue-600 px-4 py-2 sm:px-6 sm:py-2 rounded-full font-medium shadow-md border border-blue-600 hover:bg-blue-100 transition mb-4 sm:mb-6 text-sm sm:text-base">
             Features
           </button>
           <div className="text-center relative">
-            <h6 className="font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl text-[#0b1928] leading-snug">
+            <h6 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#0b1928] leading-snug">
               Streamline your recruitment with{" "}
               <br className="hidden sm:block" /> our advanced features
             </h6>
+            {/* Decorative Images (Hidden on Mobile) */}
             <img
               src="/Group 5.png"
               className="absolute -right-4 top-0 hidden lg:block"
+              alt="Decoration"
             />
             <img
               src="/Group 5.png"
               className="absolute -left-4 bottom-0 hidden lg:block"
+              alt="Decoration"
             />
           </div>
         </div>
@@ -337,19 +340,17 @@ const Home = () => {
         ].map((feature, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-6 md:px-10 ${
-              feature.reverse ? "md:flex-row-reverse" : ""
-            } mb-12`}
+            className={`flex flex-col ${
+              feature.reverse ? "md:flex-row-reverse" : "md:flex-row"
+            } items-center justify-between w-full max-w-7xl px-4 sm:px-6 md:px-10 mb-8 sm:mb-12`}
           >
             {/* Text Section */}
             <div
               className={`flex flex-col justify-center w-full md:w-1/2 mb-6 md:mb-0 ${
-                feature.reverse
-                  ? "text-center md:text-right"
-                  : "text-center md:text-left"
-              }`}
+                feature.reverse ? "md:text-right" : "md:text-left"
+              } text-center md:text-left`}
             >
-              <h5 className="font-semibold text-lg sm:text-2xl md:text-4xl text-[#0b1928] leading-snug mb-4">
+              <h5 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#0b1928] leading-snug mb-4">
                 {feature.title}
               </h5>
               <p className="text-[#3E4757] text-sm sm:text-base md:text-lg leading-relaxed">
@@ -366,7 +367,7 @@ const Home = () => {
                   alt={img.src}
                   className={`relative z-${10 - dex} ${
                     img.mx ? `mx-${img.mx}` : ""
-                  } opacity-${100 - dex * 10}`}
+                  } opacity-${100 - dex * 10} w-full h-auto`}
                 />
               ))}
               {feature.additionalImages &&
@@ -374,7 +375,8 @@ const Home = () => {
                   <img
                     key={idx}
                     src={img.src}
-                    className={`absolute ${img.position} ${img.zIndex} opacity-90`}
+                    className={`absolute ${img.position} ${img.zIndex} opacity-90 hidden sm:block`}
+                    alt="Decoration"
                   />
                 ))}
             </div>
